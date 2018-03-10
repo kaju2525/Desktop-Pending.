@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/adViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               app:tabMaxWidth="30dp"
+                app:tabTextColor="@color/colorPrimary"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                android:layout_gravity="bottom|center"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"/>
+
+
+
+
+        </android.support.v4.view.ViewPager>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_left"
+                android:layout_marginRight="90dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right"
+                android:layout_marginLeft="90dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckCode"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/code_first"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:layout_margin="10dp"
+                android:hint="X"
+                android:gravity="center"
+                android:maxLength="1"
+                android:background="@drawable/round_corner_white"/>
+            <EditText
+                android:id="@+id/code_second"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:layout_margin="10dp"
+                android:hint="X"
+                android:gravity="center"
+                android:maxLength="1"
+                android:background="@drawable/round_corner_white"/>
+            <EditText
+                android:id="@+id/code_third"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:hint="X"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_margin="10dp"
+                android:maxLength="1"
+
+                android:background="@drawable/round_corner_white"/>
+            <EditText
+                android:id="@+id/code_fourth"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:hint="X"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/round_corner_white"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend OTP"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickResendOTP"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Number"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:onClick="onClickChangeNumber"/>
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
